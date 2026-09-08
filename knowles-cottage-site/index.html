@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowles Cottage | Gargrave, Yorkshire Dales</title>
+  <meta name="description" content="Knowles Cottage is a historic two-bedroom holiday cottage in Gargrave, near Skipton and the Yorkshire Dales. Sleeps four, with enclosed garden, wood burner and private parking.">
+  <meta name="theme-color" content="#4f5d46">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght,SOFT@9..144,300..650,50..100&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:#f5efe5;
+      --cream:#fffaf1;
+      --stone:#e8dece;
+      --sage:#8c997d;
+      --sage-dark:#4f5d46;
+      --moss:#33402f;
+      --oak:#8a6544;
+      --ink:#2b2d28;
+      --muted:#65665d;
+      --line:#d4c8b6;
+      --rose:#8c514f;
+      --shadow:0 24px 70px rgba(43,45,40,.14);
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;width:100%;height:auto}
+    a{color:inherit}
+    h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif;font-weight:430;line-height:1.05;margin:0;letter-spacing:-.025em}
+    p{margin:0 0 1rem}
+    .shell{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--sage-dark);margin-bottom:1rem}
+    .section-title{font-size:clamp(2.45rem,5vw,4.9rem)}
+    .lede{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.25rem,2vw,1.72rem);line-height:1.42;color:#4e5148}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:1px solid currentColor;padding:13px 19px;text-decoration:none;font-weight:650;font-size:.92rem;letter-spacing:.01em;transition:.2s ease;background:transparent}
+    .button:hover{transform:translateY(-1px)}
+    .button.primary{background:var(--cream);color:var(--moss);border-color:var(--cream);box-shadow:0 10px 32px rgba(0,0,0,.18)}
+    .button.primary:hover{background:transparent;color:white}
+    .button.dark{background:var(--moss);color:white;border-color:var(--moss)}
+    .button.dark:hover{background:transparent;color:var(--moss)}
+
+    .site-nav{position:absolute;z-index:10;top:0;left:0;right:0;color:white;padding:24px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:"Fraunces",Georgia,serif;font-size:1.25rem;font-weight:520;text-decoration:none;letter-spacing:.01em;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+    .nav-links{display:flex;gap:26px;align-items:center}
+    .nav-links a:not(.button){text-decoration:none;font-size:.9rem;font-weight:600;text-shadow:0 2px 16px rgba(0,0,0,.32)}
+    .nav-links a:not(.button):hover{text-decoration:underline;text-underline-offset:5px}
+
+    .hero{min-height:94svh;position:relative;display:flex;align-items:flex-end;color:white;background-image:linear-gradient(180deg,rgba(17,22,16,.36) 0%,rgba(17,22,16,.06) 35%,rgba(17,22,16,.18) 58%,rgba(17,22,16,.76) 100%),url('assets/images/sunset.webp');background-size:cover;background-position:center}
+    .hero-content{padding:0 0 clamp(58px,8vw,102px);max-width:940px}
+    .hero .eyebrow{color:#f2eadc}
+    .hero h1{font-size:clamp(4rem,10vw,8.4rem);font-weight:340;letter-spacing:-.06em}
+    .hero-copy{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.22rem,2vw,1.75rem);max-width:680px;margin:24px 0 30px;color:#fff8ee}
+    .hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .scroll-link{font-size:.9rem;text-decoration:none;color:#fff8ee}
+
+    .facts{background:var(--moss);color:white;border-top:1px solid rgba(255,255,255,.12)}
+    .facts-inner{display:grid;grid-template-columns:repeat(6,1fr)}
+    .fact{padding:25px 15px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+    .fact:last-child{border-right:0}
+    .fact strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.35rem;font-weight:450}
+    .fact span{display:block;font-size:.69rem;letter-spacing:.12em;text-transform:uppercase;color:#d9ddcf;margin-top:2px}
+
+    section{padding:clamp(78px,10vw,132px) 0}
+    .intro-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(38px,8vw,98px);align-items:start}
+    .intro-copy .section-title{max-width:570px}
+    .intro-text{max-width:690px}
+    .intro-text p{font-size:1.05rem}
+    .pullquote{margin-top:34px;padding:25px 0 0;border-top:1px solid var(--line);font-family:"Fraunces",Georgia,serif;font-size:1.35rem;color:var(--moss)}
+
+    .feature-strip{padding:0 0 clamp(78px,10vw,132px)}
+    .feature-photo{height:min(72vw,720px);min-height:430px;object-fit:cover;box-shadow:var(--shadow)}
+
+    .inside{background:var(--cream)}
+    .split{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(36px,7vw,92px);align-items:center;margin-top:72px}
+    .split.reverse{grid-template-columns:.92fr 1.08fr}
+    .split.reverse .media{order:2}.split.reverse .copy{order:1}
+    .media img{aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+    .media.two-up{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .media.two-up img{height:100%;min-height:430px;aspect-ratio:auto;object-fit:cover}
+    .copy h3{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:20px}
+    .copy p{color:var(--muted);font-size:1.02rem;max-width:545px}
+    .details{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.84rem;color:var(--sage-dark)}
+
+    .history{background:var(--stone)}
+    .history-card{display:grid;grid-template-columns:.85fr 1.15fr;background:var(--cream);box-shadow:var(--shadow)}
+    .history-card img{height:100%;min-height:520px;object-fit:cover}
+    .history-copy{padding:clamp(36px,6vw,78px)}
+    .history-copy h2{font-size:clamp(2.2rem,4.4vw,4.1rem);margin-bottom:22px}
+    .history-copy p{color:var(--muted);font-size:1.02rem;max-width:680px}
+
+    .garden{background:var(--paper)}
+    .garden-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:56px}
+    .garden-grid img{height:100%;object-fit:cover;min-height:300px}
+    .garden-grid .tall{grid-row:span 2;min-height:620px}
+    .garden-copy{background:var(--sage-dark);color:white;padding:clamp(34px,5vw,62px);display:flex;flex-direction:column;justify-content:center}
+    .garden-copy h3{color:white;font-size:clamp(2rem,4vw,3.4rem);margin-bottom:18px}
+    .garden-copy p{color:#edf0e8}
+
+    .gargrave{background:var(--cream)}
+    .village-head{display:grid;grid-template-columns:1fr .95fr;gap:60px;align-items:end;margin-bottom:54px}
+    .village-head .lede{max-width:590px}
+    .village-gallery{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}
+    .village-gallery img{width:100%;height:100%;object-fit:cover;display:block}
+    .village-gallery .main{height:min(58vw,650px);min-height:480px}
+    .village-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px;height:min(58vw,650px);min-height:480px}
+    .village-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+    .village-note{background:var(--cream);padding:28px}
+    .village-note h3{font-size:1.45rem;margin-bottom:10px}
+    .village-note p{font-size:.94rem;color:var(--muted);margin:0}
+
+    .nearby{background:var(--paper)}
+    .nearby-head{text-align:center;max-width:760px;margin:0 auto 58px}
+    .place-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .place{background:var(--paper);padding:clamp(28px,4vw,46px)}
+    .place-top{display:flex;justify-content:space-between;gap:24px;align-items:baseline;margin-bottom:15px}
+    .place h3{font-size:1.7rem}
+    .distance{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);font-weight:650;white-space:nowrap}
+    .place p{color:var(--muted);font-size:.96rem;margin:0}
+    .nearby-photo{margin-top:58px;position:relative}
+    .nearby-photo img{height:min(62vw,660px);min-height:420px;object-fit:cover}
+    .nearby-caption{position:absolute;left:22px;bottom:22px;background:rgba(245,239,229,.94);padding:13px 17px;font-family:"Fraunces",Georgia,serif;font-size:1rem}
+
+    .gallery{background:var(--moss);color:white}
+    .gallery-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+    .gallery .section-title{color:white}.gallery .eyebrow{color:#cdd6c3}.gallery-head p{max-width:430px;color:#d8ddd4;margin:0}
+    .photo-grid{columns:3 280px;column-gap:14px}
+    .photo-grid figure{break-inside:avoid;margin:0 0 14px;overflow:hidden;background:#222}
+    .photo-grid img{transition:transform .45s ease}.photo-grid figure:hover img{transform:scale(1.018)}
+
+    .booking{background:var(--rose);color:white;text-align:center}
+    .booking-inner{max-width:820px;margin:auto}
+    .booking .eyebrow{color:#f3deda}.booking h2{font-size:clamp(2.8rem,6vw,5.4rem);color:white}.booking p{max-width:640px;margin:24px auto 32px;color:#fff3ef;font-size:1.02rem}.booking small{display:block;margin-top:20px;color:#f6ddd8}
+
+    footer{background:#262b24;color:#dfe3da;padding:35px 0}.footer-inner{display:flex;justify-content:space-between;gap:28px;align-items:center;font-size:.84rem}.footer-brand{font-family:"Fraunces",Georgia,serif;font-size:1.15rem;color:white}
+
+    @media (max-width:900px){
+      .facts-inner{grid-template-columns:repeat(3,1fr)}.fact:nth-child(3){border-right:0}.fact:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.12)}
+      .intro-grid,.village-head,.history-card{grid-template-columns:1fr;gap:34px}.history-card img{min-height:380px}
+      .split,.split.reverse{grid-template-columns:1fr;gap:28px}.split.reverse .media,.split.reverse .copy{order:initial}.media.two-up img{min-height:360px}
+      .garden-grid{grid-template-columns:1fr}.garden-grid .tall{grid-row:auto;min-height:430px}
+      .village-gallery{grid-template-columns:1fr}.village-gallery .main,.village-stack{height:auto;min-height:0}.village-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto}.village-stack img{height:330px}.village-notes{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .shell{width:min(calc(100% - 28px),var(--max))}.nav-links a:not(.button){display:none}.nav-links .button{padding:10px 13px;font-size:.82rem}.site-nav{padding:18px 0}.brand{font-size:1.1rem}
+      .hero{min-height:86svh;background-position:55% center}.hero-actions{align-items:flex-start;flex-direction:column}
+      .facts-inner{grid-template-columns:repeat(2,1fr)}.fact:nth-child(2n){border-right:0}.fact:nth-child(3){border-right:1px solid rgba(255,255,255,.12)}.fact:nth-child(-n+4){border-bottom:1px solid rgba(255,255,255,.12)}
+      .feature-photo{min-height:360px}.media.two-up{grid-template-columns:1fr}.media.two-up img{min-height:320px}.place-grid{grid-template-columns:1fr}.gallery-head,.footer-inner{align-items:flex-start;flex-direction:column}.village-stack{grid-template-columns:1fr}.village-stack img,.nearby-photo img{min-height:340px;height:auto}.nearby-caption{position:static;margin-top:0}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-grid img,.button{transition:none}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">Knowles Cottage</a>
+      <div class="nav-links">
+        <a href="#cottage">The cottage</a>
+        <a href="#gargrave">Gargrave</a>
+        <a href="#nearby">Nearby</a>
+        <a class="button primary" href="https://www.holidaycottages.co.uk/cottage/oc-45568-knowles-cottage?n=7&sd=12022027" target="_blank" rel="noopener">Book now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="shell hero-content">
+      <div class="eyebrow">Gargrave · Near Skipton · Yorkshire Dales</div>
+      <h1>Knowles<br>Cottage</h1>
+      <p class="hero-copy">A beautifully restored 19th-century cottage in the heart of Gargrave, with the Yorkshire Dales on the doorstep.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://www.holidaycottages.co.uk/cottage/oc-45568-knowles-cottage?n=7&sd=12022027" target="_blank" rel="noopener">Check availability &amp; book</a>
+        <a class="scroll-link" href="#cottage">Explore the cottage ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="facts" aria-label="At a glance">
+    <div class="shell facts-inner">
+      <div class="fact"><strong>4</strong><span>Guests</span></div>
+      <div class="fact"><strong>2</strong><span>Bedrooms</span></div>
+      <div class="fact"><strong>1</strong><span>Bathroom</span></div>
+      <div class="fact"><strong>1800</strong><span>Period cottage</span></div>
+      <div class="fact"><strong>2 cars</strong><span>Private parking</span></div>
+      <div class="fact"><strong>Dog friendly</strong><span>Enclosed garden</span></div>
+    </div>
+  </div>
+
+  <main>
+    <section id="cottage">
+      <div class="shell intro-grid">
+        <div class="intro-copy">
+          <div class="eyebrow">A quiet Yorkshire retreat</div>
+          <h2 class="section-title">Restored Yorkshire stone, peaceful gardens and the Dales close by.</h2>
+        </div>
+        <div class="intro-text">
+          <p class="lede">Originally the butler's home for a grand Gargrave house, Knowles Cottage keeps its period character while giving you an easy, comfortable place to stay.</p>
+          <p>High ceilings, original shutters and warm timber sit alongside a relaxed living space, Smart TV and the comforts you want after a day outdoors. The cottage sleeps four in a king-size bedroom and a twin room, with an upstairs bathroom offering both a walk-in shower and freestanding bath.</p>
+          <p class="pullquote">Walk by the river in the morning. Follow the canal after lunch. Light the wood burner when you get home.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="feature-strip">
+      <div class="shell"><img class="feature-photo" src="assets/images/dining-room.webp" alt="Dining table laid for breakfast in the bright living and dining room" loading="lazy"></div>
+    </div>
+
+    <section class="inside" aria-labelledby="inside-title">
+      <div class="shell">
+        <div class="eyebrow">Inside</div>
+        <h2 class="section-title" id="inside-title">Comfort after a day in the Dales.</h2>
+
+        <div class="split">
+          <div class="media"><img src="assets/images/living-room.webp" alt="Comfortable living room with sage green details and timber furniture" loading="lazy"></div>
+          <div class="copy">
+            <div class="eyebrow">Living &amp; dining</div>
+            <h3>A warm room to come home to.</h3>
+            <p>Settle into the sofa after a long walk, light the wood burner and put your feet up. The farmhouse-style dining table makes an easy centre for slow breakfasts, maps, board games and supper together.</p>
+            <div class="details"><span>Wood burner</span><span>Smart TV</span><span>Wi-Fi</span><span>Family friendly</span></div>
+          </div>
+        </div>
+
+        <div class="split reverse">
+          <div class="media two-up">
+            <img src="assets/images/bedroom.webp" alt="King-size bedroom with warm timber furniture and floral textiles" loading="lazy">
+            <img src="assets/images/twin-bedroom.webp" alt="Twin bedroom with soft green and cream walls and two single beds" loading="lazy">
+          </div>
+          <div class="copy">
+            <div class="eyebrow">Upstairs</div>
+            <h3>Two restful bedrooms.</h3>
+            <p>The main bedroom has a king-size bed and generous storage; the second is a welcoming twin with space to sit and read. Both carry the cottage's calm palette of warm wood, soft neutrals and botanical details.</p>
+            <div class="details"><span>King-size bedroom</span><span>Twin bedroom</span><span>Sleeps four</span></div>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="media"><img src="assets/images/staircase.webp" alt="Original staircase and built-in shelves painted in soft sage green" loading="lazy"></div>
+          <div class="copy">
+            <div class="eyebrow">Period character</div>
+            <h3>Details that tell the cottage's story.</h3>
+            <p>Stone walls, timber, high ceilings, old shutters and a traditional staircase give the house its sense of place, while the soft greens and natural finishes keep it light and unfussy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="history" aria-labelledby="history-title">
+      <div class="shell history-card">
+        <img src="assets/images/cottage-courtyard.webp" alt="Historic stone cottages and courtyard in Gargrave" loading="lazy">
+        <div class="history-copy">
+          <div class="eyebrow">A little history</div>
+          <h2 id="history-title">A cottage with roots in village life.</h2>
+          <p>Knowles Cottage dates back to around 1800 and was once the butler's cottage for a grand Gargrave house. Its scale, stonework and position in mature grounds still give it the feel of a tucked-away period home rather than a standard holiday let.</p>
+          <p>Gargrave has long been shaped by its landscape. The River Aire runs through the village, while the Leeds &amp; Liverpool Canal brought boats, trade and towpath life through the heart of the community. Today that same setting makes it a natural base for walkers, cyclists and anyone wanting a gentler way into the Yorkshire Dales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="garden" aria-labelledby="garden-title">
+      <div class="shell">
+        <div class="eyebrow">Outside</div>
+        <h2 class="section-title" id="garden-title">Breakfast outside, a barbecue, or simply doing very little.</h2>
+        <div class="garden-grid">
+          <img class="tall" src="assets/images/cottage-garden-wide.webp" alt="Sunny mature garden beside the stone cottage" loading="lazy">
+          <div class="garden-copy">
+            <h3>Your own enclosed garden.</h3>
+            <p>Step out into the mature grounds whenever the weather allows. There is space for children and a four-legged friend to potter, plus a picnic table and barbecue for summer evenings.</p>
+            <p>Guests are also welcome to enjoy the owner's adjacent front garden, and there is private off-road parking for two cars.</p>
+          </div>
+          <img src="assets/images/cottage-door.webp" alt="Welcoming cottage doorway framed by ivy, roses and pots of red flowers" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="gargrave" id="gargrave" aria-labelledby="gargrave-title">
+      <div class="shell">
+        <div class="village-head">
+          <div>
+            <div class="eyebrow">Gargrave</div>
+            <h2 class="section-title" id="gargrave-title">A proper Dales village.</h2>
+          </div>
+          <p class="lede">Gargrave is small enough to feel peaceful, but useful enough for a relaxed stay: pubs, a shop, village walks, the river, the canal and a railway station are all close by.</p>
+        </div>
+        <div class="village-gallery">
+          <img class="main" src="assets/images/canal-path.webp" alt="Quiet canal path through Gargrave with trees reflected in the water" loading="lazy">
+          <div class="village-stack">
+            <img src="assets/images/river-stones.webp" alt="River Aire at sunset with stones and reflected sky" loading="lazy">
+            <img src="assets/images/gargrave-sunrise.webp" alt="Misty Gargrave morning with sunrise over fields" loading="lazy">
+          </div>
+        </div>
+        <div class="village-notes">
+          <div class="village-note"><h3>Walk from the door</h3><p>Stroll to the River Aire, the canal towpath or the village green without needing the car.</p></div>
+          <div class="village-note"><h3>Village essentials</h3><p>Pubs, local shops and everyday supplies are nearby, so short stays stay simple.</p></div>
+          <div class="village-note"><h3>Easy exploring</h3><p>Skipton, Malham and the National Park are close enough for easy days out.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nearby" id="nearby" aria-labelledby="nearby-title">
+      <div class="shell">
+        <div class="nearby-head">
+          <div class="eyebrow">Things to do nearby</div>
+          <h2 class="section-title" id="nearby-title">Dales days, canal walks and market-town mornings.</h2>
+        </div>
+        <div class="place-grid">
+          <article class="place"><div class="place-top"><h3>Skipton</h3><span class="distance">4 miles</span></div><p>A lively market town with a Norman castle, independent shops, pubs, restaurants and a canal basin. Go by car, or make a longer walk of it along the towpath.</p></article>
+          <article class="place"><div class="place-top"><h3>Malham</h3><span class="distance">8 miles</span></div><p>Classic limestone country: Malham Cove, Gordale Scar and Janet's Foss are all close enough for a memorable day out.</p></article>
+          <article class="place"><div class="place-top"><h3>The Dales</h3><span class="distance">Under a mile</span></div><p>The National Park boundary is close by, with walking, cycling, quiet lanes and wide views in easy reach.</p></article>
+          <article class="place"><div class="place-top"><h3>Leeds &amp; Liverpool Canal</h3><span class="distance">On the doorstep</span></div><p>The towpath runs through Gargrave itself. It is the gentle option: flat, scenic and lovely in almost any weather.</p></article>
+        </div>
+        <div class="nearby-photo">
+          <img src="assets/images/church-cattle.webp" alt="Black and white photograph of cattle in front of Gargrave church tower" loading="lazy">
+          <div class="nearby-caption">Village views, field paths and church bells.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="gallery-head">
+          <div>
+            <div class="eyebrow">Gallery</div>
+            <h2 class="section-title" id="gallery-title">A cottage for every season.</h2>
+          </div>
+          <p>Misty mornings, summer gardens, quiet canal paths and evenings indoors after a day outside.</p>
+        </div>
+        <div class="photo-grid">
+          <figure><img src="assets/images/cottage-garden.webp" alt="Garden view at Knowles Cottage" loading="lazy"></figure>
+          <figure><img src="assets/images/river-sunset.webp" alt="Pink and orange sunset over the river" loading="lazy"></figure>
+          <figure><img src="assets/images/canal-boat.webp" alt="Blue narrowboat on the canal in Gargrave" loading="lazy"></figure>
+          <figure><img src="assets/images/twin-bedroom.webp" alt="Twin bedroom at Knowles Cottage" loading="lazy"></figure>
+          <figure><img src="assets/images/cottage-spring.webp" alt="Stone cottage and garden in spring" loading="lazy"></figure>
+          <figure><img src="assets/images/garden.webp" alt="Mature garden and lawn" loading="lazy"></figure>
+          <figure><img src="assets/images/village.webp" alt="Stone village buildings in Gargrave" loading="lazy"></figure>
+          <figure><img src="assets/images/living-room.webp" alt="Living room at Knowles Cottage" loading="lazy"></figure>
+          <figure><img src="assets/images/bedroom.webp" alt="King-size bedroom at Knowles Cottage" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="shell booking-inner">
+        <div class="eyebrow">Book your stay</div>
+        <h2>Ready for a Yorkshire escape?</h2>
+        <p>Whether you are planning long walks in the Dales, slow afternoons by the canal or a few quiet days away, Knowles Cottage is waiting.</p>
+        <a class="button primary" href="https://www.holidaycottages.co.uk/cottage/oc-45568-knowles-cottage?n=7&sd=12022027" target="_blank" rel="noopener">Check availability &amp; book</a>
+        <small>Bookings are handled securely through Holiday Cottages.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><span class="footer-brand">Knowles Cottage</span><br>Gargrave, near Skipton and the Yorkshire Dales</div>
+      <div><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+</body>
+</html>
